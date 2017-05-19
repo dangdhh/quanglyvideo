@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon_dark.ico">
+	<title>Admin Edit</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+	<div id="app">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-md-push-2 table-responsive">
+					<h2 class="bg-primary text-center">Chỉnh sửa Video</h2>
+					<form action="../edit/<%= data.id %>" method="post" role="form" enctype="multipart/form-data">
+						<legend>Form title</legend>
+					
+						<div class="form-group">
+							<label for="">Tiêu đề : </label>
+							<input type="text" class="form-control" name="title" id="form-title" value="<%= data.title %>" required>
+						</div>
+						<div class="form-group">
+							<label for="">Mã Video : </label>
+							<input type="text" class="form-control" id="form-key" name="key" value="<%= data.key %>" required>
+						</div>
+						<div class="form-group">
+							<label for="form-description">Mô tả : </label>
+							<input type="text" class="form-control" id="form-description" name="description" value="<%= data.description %>"></input>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-6">
+								Ảnh cũ: <img src="../../upload/<%= data.image %>"   width="150px" alt="">
+							</div>
+							<div class="col-md-6">
+								<label class="btn btn-default btn-file">Ảnh mới: </label>
+								<input type="file" id="form-uploadfile" name="uploadfile">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="//code.jquery.com/jquery.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+</body>
+</html>

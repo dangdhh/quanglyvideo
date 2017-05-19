@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Admin list</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon_dark.ico">
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-push-2">
+					<table class="table table-hover">
+						<thead>
+							<tr class="bg-success text-center">
+								<td colspan="6"><a href="add"><span class="fa fa-plus-square-o"></span> Thêm Video</a></td>
+							</tr>
+							<tr class="bg-primary">
+								<th>ID</th>
+								<th>Tiêu Đề</th>
+								<th>Mô tả</th>
+								<th>ID video</th>
+								<th>Hình Ảnh</th>
+								<th>Edit - Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% data.rows.forEach(function(item){ %>
+							<tr>
+								<td><%= item.id %></td>
+								<td><%= item.title %></td>
+								<td><%= item.description %></td>
+								<td><%= item.key %></td>
+								<td><img src="../upload/<%= item.image %>" width="150px" alt=""></td>
+								<td><a href="edit/<%= item.id %>"><span class="fa fa-edit"></span> Edit</a> - <a onclick="return comfirm('Are you sure ?')" href="delete/<%= item.id %>"><span class="fa fa-remove"></span> Delete</a></td>
+							</tr>
+							<% }) %>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery -->
+	<script src="//code.jquery.com/jquery.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon_dark.ico">
+		<title>Admin Add</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="app">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8 col-md-push-2">
+						<form action="add" method="post" role="form" enctype="multipart/form-data">
+							<legend>Upload Video</legend>
+						
+							<div class="form-group">
+								<label for="">Tiêu đề</label>
+								<input type="text" class="form-control" id="title" name="title">
+							</div>
+							<div class="form-group">
+								<label for="">Mô tả</label>
+								<input type="text" class="form-control" id="description" name="description">
+							</div>
+							<div class="form-group">
+								<label for="">Mã Video</label>
+								<input type="text" class="form-control" id="key" name="key">
+							</div>
+							<div class="form-group">
+								<label for="">Ảnh</label>
+								<input type="file" class="form-control" id="uploadfile" name="uploadfile">
+							</div>
+							
+						
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</body>
+</html>
